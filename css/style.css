@@ -1,0 +1,519 @@
+/* Start Variables */
+:root
+{
+    --main-color: #1ABC9C;
+    --second-color: #2D3E50;
+    --third-color: #1B252F;
+    --first-text-color: #ffffff;
+}
+/* End Variables */
+
+/* Start Main Rules */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+/* End Main Rules */
+
+
+/* Start Nav */
+nav
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh;
+    padding: 0 100px;
+    background-color: var(--second-color);
+    position: fixed;
+    z-index: 1000;
+}
+.logo a
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--first-text-color);
+    text-decoration: none;
+}
+.menu
+{
+    display: flex;
+    justify-content: end;
+}
+.menu ul
+{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+}
+.menu ul li a
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--first-text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu ul li a:hover
+{
+    color: var(--main-color);
+}
+.menu-btn
+{
+    display: none;
+}
+/* End Nav */
+
+
+section
+{
+    padding: 14vh 25px;
+}
+
+/* Start Profile Section */
+.profile
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--main-color);
+}
+.profile-photo
+{
+    display: flex;
+    justify-content: center;
+}
+.profile img
+{
+    width: 15rem;
+}
+.profile h1
+{
+    font-size: 64px;
+    color: var(--first-text-color);
+}
+.star
+{
+    width: 33px;
+    position: relative;
+}
+.star svg
+{
+    width: 33px;
+    color: var(--first-text-color);
+}
+.star::after
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: calc(-100% - 100px);
+    transform: translateY(-50%);
+    width: 112px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--first-text-color);
+}
+.star::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(-100% - 100px);
+    transform: translateY(-50%);
+    width: 112px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--first-text-color);
+}
+.profile p
+{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--first-text-color);
+}
+/* End Profile Section */
+
+
+/* Start Portfolio Section */
+.portfolio
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.portfolio h2
+{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--second-color);
+}
+.portfolio .star svg
+{
+    color: var(--second-color);
+}
+.portfolio .star::after
+{
+    background-color: var(--second-color);
+}
+.portfolio .star::before
+{
+    background-color: var(--second-color);
+}
+.portfolio-galary
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+.portfolio-galary .galary-item 
+{
+    position: relative;
+    cursor: pointer;
+}
+.portfolio-galary .galary-item img
+{
+    width: 100%;
+    border-radius: 12px;
+}
+.galary-add
+{
+    width: 100%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.galary-add svg
+{
+    width: 65px;
+    color: var(--first-text-color);
+}
+.portfolio-galary .galary-item:hover .galary-add
+{
+    opacity: 1;
+}
+/* End Portfolio Section */
+
+
+/* Start About Section */
+.about
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--main-color);
+}
+.about h2
+{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--first-text-color);
+}
+.about .content
+{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+.about .content p
+{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--first-text-color);
+}
+.about button
+{
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    border: solid 2px var(--first-text-color);
+    border-radius: 8px;
+    padding: 20px 30px;
+    font-size: 18px;
+    color: var(--first-text-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.about button svg
+{
+    width: 20px;
+}
+.about button:hover
+{
+    background-color: var(--first-text-color);
+    color: var(--third-color);
+}
+.about button svg
+{
+    width: 20px;
+}
+/* End About Section */
+
+
+
+
+
+/* Start About Section */
+.contact
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.contact h2
+{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--second-color);
+}
+.contact .star svg
+{
+    color: var(--second-color);
+}
+.contact .star::after
+{
+    background-color: var(--second-color);
+}
+.contact .star::before
+{
+    background-color: var(--second-color);
+}
+.contact form
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+.contact form input
+{
+    width: 100%;
+    padding: 30px 0;
+    font-size: 22px;
+    font-weight: 500;
+    border: none;
+    border-bottom: solid 1px var(--second-color);
+}
+.contact form textarea
+{
+    width: 100%;
+    height: 20vh;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    border-bottom: solid 1px var(--second-color);
+    resize: none;
+}
+.contact form button
+{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 8px;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--first-text-color);
+}
+/* End About Section */
+
+
+
+/* Start Footer Section */
+footer
+{
+    width: 100%;
+    padding: 14vh 75px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    background-color: var(--second-color);
+    text-align: center;
+}
+footer div .social
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+footer div .social .icon
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:  solid 2px var(--first-text-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer .social .icon svg
+{
+    width: 15px;
+    color: var(--first-text-color);
+}
+footer div .social .icon:hover
+{
+    background-color: var(--first-text-color);
+    border:  solid 2px var(--first-text-color);
+}
+footer div .social .icon:hover svg
+{
+    color: var(--third-color);
+}
+footer div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+footer h3
+{
+    font-size: 24px;
+    color: var(--first-text-color);
+}
+footer p
+{
+    font-size: 20px;
+    color: var(--first-text-color);
+}
+footer a
+{
+    color: var(--main-color);
+}
+/* End Footer Section */
+
+section:last-of-type
+{
+    padding: 4vh 25px;
+    text-align: center;
+    background-color: var(--third-color);
+    color: var(--first-text-color);
+}
+
+
+
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    nav
+    {
+        padding: 25px 10px;
+    }
+    .menu
+    {
+        width: 100%;
+        display: none;
+        justify-content: start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--second-color);
+        padding: 25px 0 25px 100px;
+    }
+    .menu ul
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .menu-btn
+    {
+        height: min-content;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--main-color);
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: var(--first-text-color);
+        cursor: pointer;
+    }
+    .menu-btn svg
+    {
+        width: 15px;
+    }
+    .profile h1
+    {
+        text-align: center;
+        font-size: 44px;
+    }
+    .portfolio-galary
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about .content
+    {
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contact form
+    {
+        width: 100%;
+    }
+    footer
+    {
+        grid-template-columns: repeat(1,1fr);
+        padding: 14vh 0;
+    }
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+    .portfolio-galary
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
